@@ -1,6 +1,11 @@
 # FCS_biblio
 Bibliometric analysis of Forager Child Studies research
 
+<figure class="image">
+<img src="https://github.com/erik-ringen/FCS_biblio/blob/main/img/word_cor.png" width="500">
+  <figcaption>Top 20 words from the titles of research articles authored by Forager Child Studies members. Vertex size is proportinoal to the frequency of each word, and edge width is proportional to the author-level correlation between each words (i.e., their co-occurance frequency). </figcaption>
+</figure>
+
 # Setup
 
 Before proceeding, make sure that you have either [Anaconda](https://docs.anaconda.com/anaconda/install/index.html) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) installed. Once you do, open your terminal and:
@@ -14,7 +19,7 @@ git clone https://https://github.com/erik-ringen/FCS_biblio
 (2) Install the conda environment
 
 ```
-conda env create --file enironment.yml
+conda env create --file environment.yml
 ```
 
 (3) Activate the conda environment
