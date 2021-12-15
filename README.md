@@ -1,10 +1,12 @@
 # FCS_biblio
 Bibliometric analysis of Forager Child Studies research
 
+<p align="center">
 <figure class="image">
 <img src="https://github.com/erik-ringen/FCS_biblio/blob/main/img/word_cor.png" width="500">
-  <figcaption>Top 20 words from the titles of research articles authored by Forager Child Studies members. Vertex size is proportinoal to the frequency of each word, and edge width is proportional to the author-level correlation between each words (i.e., their co-occurance frequency). </figcaption>
+  <figcaption>Top 20 words from the titles of research articles authored by Forager Child Studies (FCS) members. Vertex size is proportinoal to the frequency of each word, and edge width is proportional to the author-level correlation between each words (i.e., their co-occurance frequency). I average over variation between authors and between articles using a multilevel categorical (i.e., multinomial) model, defined in "fcs_model.stan". This adjustment accounts for unbalanced sampling (i.e., some authors have more articles than others) and thus produces a clearer mapping of reserach topics in FCS. </figcaption>
 </figure>
+</p>
 
 # Setup
 
