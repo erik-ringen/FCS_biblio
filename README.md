@@ -32,7 +32,7 @@ conda activate FCS_biblio
 
 All scripts in this repository should now run seamlessly.
 
-# Re-producing analysis
+# Reproducing analyses
 
 To download publication data from Google Scholar, run the following from your terminal:
 ```
