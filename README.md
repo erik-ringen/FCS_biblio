@@ -20,5 +20,22 @@ conda env create --file enironment.yml
 (3) Activate the conda environment
 
 ```
-conda active FCS_biblio
+conda activate FCS_biblio
 ```
+
+All scripts in this repository should now run seamlessly.
+
+# Re-producing analysis
+
+To download publication data from Google Scholar, run the following from your terminal:
+```
+python process_pubdata.py
+```
+
+To do a textual analysis of the publication data and reproduce the main figure shown above, run:
+
+```
+python pub_analysis.py
+```
+
+Note that this will take a few minutes to run, as the Stan model is compiled into C++ code and sampled using MCMC.
