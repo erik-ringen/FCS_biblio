@@ -1,0 +1,14 @@
+name: FCS_biblio
+channels:
+  - defaults
+dependencies:
+  - python=3.9.7
+  - pip
+  - pandas
+  - numpy
+  - gensim
+  - pip:
+    - cmdstanpy
+    - scholarly
+    - python-igraph
+    - cairocffi
