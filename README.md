@@ -16,6 +16,7 @@ Before proceeding, make sure that you have either [Anaconda](https://docs.anacon
 
 ```
 git clone https://github.com/erik-ringen/FCS_biblio
+cd FCS_biblio
 ```
 
 (2) Install the conda environment
