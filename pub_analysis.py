@@ -42,6 +42,10 @@ for i in range(len(processed_titles)):
 # Organize into dataframe
 d_words = pd.DataFrame({'word':processed_words, 'title':original_titles, 'fcs_author':fcs_author})
 
+for i in range(len(d_words)):
+    if d_words['word'][i] == "evolutionari":
+        d_words['word'][i] = "evolut"
+
 word_count = {i:processed_words.count(i) for i in processed_words}
 n_keep = 20
 top_words = pd.DataFrame({'word':sorted(word_count, key=word_count.get, reverse=True)[0:n_keep]})
@@ -125,6 +129,26 @@ for d in range(0, stan_data["N_wo"]):
     median_Rho[d,d] = 0
 
 node_names = list(set(d_words_top["word"]))
+node_names_relab = node_names
+
+## Get full versions of stemmed words
+for i in range(len(node_names_relab)):
+
+    if node_names_relab[i] == "implic":
+        node_names_relab[i] = "implications"
+
+    if node_names_relab[i] == "studi":
+        node_names_relab[i] = "study"
+
+    if node_names_relab[i] == "evolut":
+        node_names_relab[i] = "evolution"
+
+    if node_names_relab[i] == "societi":
+        node_names_relab[i] = "society"
+
+    if node_names_relab[i] == "cultur":
+        node_names_relab[i] = "culture"
+
 
 conn_indices = np.where(median_Rho)
 weights = median_Rho[conn_indices]
@@ -134,7 +158,7 @@ edges = zip(*conn_indices)
 # init graph
 G = igraph.Graph(edges=edges, directed=False)
 
-G.vs['label'] = node_names
+G.vs['label'] = node_names_relab
 G.vs['color'] = "rgba(132, 206, 184, 1)"
 G.es['weight'] = weights
 G.es['width'] = weights*10
