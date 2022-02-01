@@ -148,6 +148,9 @@ for i in range(len(node_names_relab)):
 
     if node_names_relab[i] == "cultur":
         node_names_relab[i] = "culture"
+    
+    if node_names_relab[i] == "forag":
+        node_names_relab[i] = "foraging"
 
 
 conn_indices = np.where(median_Rho)
