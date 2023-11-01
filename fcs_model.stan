@@ -3,9 +3,9 @@ data{
     int N_wo;
     int N_author;
     int N_paper;
-    int word_id[N_obs];
-    int paper_id[N_obs];
-    int author_id[N_obs];
+    array[N_obs] int word_id;
+    array[N_obs] int paper_id;
+    array[N_obs] int author_id;
 }
 
 parameters{
